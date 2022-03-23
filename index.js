@@ -5,9 +5,9 @@ function addMovie(event) {
     event.preventDefault()
     let inputField = document.querySelector('input')
 
-    let movie = document.createElement("li")
+    const movie = document.createElement("li")
 
-    let movieTitle = document.createElement("span");
+    const movieTitle = document.createElement("span");
     movieTitle.textContent = inputField.value;
     movieTitle.addEventListener("click", crossOffMovie);
     movie.appendChild(movieTitle)
@@ -17,7 +17,7 @@ function addMovie(event) {
     deleteBtn.addEventListener("click", deleteMovie);
     movie.appendChild(deleteBtn);
 
-    document.querySelector("ul").appendChild("movie")
+    document.querySelector("ul").appendChild(movie)
     inputField.value = ''
 }
 
